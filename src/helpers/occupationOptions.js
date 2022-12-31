@@ -1,0 +1,38 @@
+const occupationOptions = {
+    'Occupation': '',
+    'Accountant': 'Accountant',
+    'Architect': 'Architect',
+    'Artist': 'Artist',
+    'Athlete': 'Athlete',
+    'Chef': 'Chef',
+    'Dentist': 'Dentist',
+    'Doctor': 'Doctor',
+    'Engineer': 'Engineer',
+    'Firefighter': 'Firefighter',
+    'Graphic designer': 'Graphic designer',
+    'Information Technology': 'Information Technology',
+    'Journalist': 'Journalist',
+    'Lawyer': 'Lawyer',
+    'Librarian': 'Librarian',
+    'Musician': 'Musician',
+    'Nurse': 'Nurse',
+    'Optometrist': 'Optometrist',
+    'Pharmacist': 'Pharmacist',
+    'Physical therapist': 'Physical therapist',
+    'Pilot': 'Pilot',
+    'Plumber': 'Plumber',
+    'Police officer': 'Police officer',
+    'Psychologist': 'Psychologist',
+    'Real estate agent': 'Real estate agent',
+    'Salesperson': 'Salesperson',
+    'Student': 'Student',
+    'Social worker': 'Social worker',
+    'Teacher': 'Teacher',
+    'Veterinarian': 'Veterinarian',
+    'Web developer': 'Web developer',
+    'Writer': 'Writer',
+    'Other': 'Other'
+  };
+  
+  export default occupationOptions;
+  

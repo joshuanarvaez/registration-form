@@ -1,0 +1,54 @@
+/* @import '../../theme.js';
+
+.navbar {
+  background-color: red;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: ${theme.spacing.md}px;
+}
+
+.menuButton {
+  margin-right: ${theme.spacing.sm}px;
+}
+
+@media (min-width: ${theme.breakpoints.sm}px) {
+  .menuButton {
+    display: none;
+  }
+}
+
+/* Extra small screens (less than 576px) */
+/* @media (max-width: ${theme.breakpoints.xs - 1}px) {
+  .navbar {
+    background-color: red;
+  }
+} */
+
+/* Small screens (576px to 767px) */
+/* @media (min-width: ${theme.breakpoints.sm}px) and (max-width: ${theme.breakpoints.md - 1}px) {
+  .navbar {
+    background-color: green;
+  }
+} */
+
+/* Medium screens (768px to 991px) */
+/* @media (min-width: ${theme.breakpoints.md}px) and (max-width: ${theme.breakpoints.lg - 1}px) {
+  .navbar {
+    background-color: blue;
+  }
+} */
+
+/* Large screens (992px to 1199px) */
+/* @media (min-width: ${theme.breakpoints.lg}px) and (max-width: ${theme.breakpoints.xl - 1}px) {
+  .navbar {
+    background-color: yellow;
+  }
+} */
+
+/* Extra large screens (1200px and up) */
+/* @media (min-width: ${theme.breakpoints.xl}px) {
+  .navbar {
+    background-color: purple;
+  }
+} */ 
