@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import SignUpForm from '../Forms/SignUpForm';
+import SignUpForm from '../Form/RegistrationForm';
 
 const Home = () => {
   const location = useLocation();

@@ -1,0 +1,13 @@
+  .RegistrationForm {
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .input-group {
+justify-content: center;
+}
+
+.password-generator-link {
+  color: red;
+  text-decoration: underline;
+}

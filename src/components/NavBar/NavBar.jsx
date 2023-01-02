@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import './styles.css';
-import logo from '../../assets/logo2.png';
+import xlLogo from '../../assets/xlLogo.png';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +19,7 @@ const NavBar = () => {
       <Container fluid>
       <Navbar.Brand>
         <Link to="/">
-          <img src={logo} width="250" height="250" className="d-inline-block align-top" alt="Logo" />
+          <img src={xlLogo} width="250" height="250" className="d-inline-block align-top" alt="Logo" />
         </Link>
       </Navbar.Brand>
 
@@ -28,6 +28,8 @@ const NavBar = () => {
           <Nav className="justify-content-end flex-grow-1 pe-3">
             <Nav.Link as={Link} to="/about">About</Nav.Link>
             <Nav.Link as={Link} to="/account">Account</Nav.Link>
+            <Nav.Link as={Link} to="/password">Password Generator</Nav.Link>
+
           </Nav>
         </Navbar.Collapse>
       </Container>
