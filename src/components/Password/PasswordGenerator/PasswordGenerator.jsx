@@ -66,10 +66,11 @@ const PasswordGenerator = () => {
                                 </div>
                                 <div className="text-center">
                                     <input
-                                        type="submit"
+                                        type="button"
                                         value="Generate"
                                         onClick={handleGenerateButtonClick}
-                                        className="btn btn-outline-dark bg-primary text-white mx-auto" />
+                                        className="btn btn-outline-dark bg-primary text-white mx-auto btn-lg"
+                                         />
                                 </div>
                             </div>
                         </div>

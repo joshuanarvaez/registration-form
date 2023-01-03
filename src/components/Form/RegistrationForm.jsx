@@ -5,6 +5,7 @@ import validator from 'validator';
 import PasswordGenerator from '../Password/PasswordGenerator/PasswordGenerator';
 import { FirstName, LastName, BirthDate, Email, Password, ConfirmPassword } from '../index';
 
+
 const RegistrationForm = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
@@ -17,6 +18,7 @@ const RegistrationForm = () => {
   const [passwordLength, setPasswordLength] = useState(7);
   const [confirmPassword, setConfirmPassword] = useState('');
   const [isValidForm, setIsValidForm] = useState(false);
+
 
   function handlePasswordChange() {
     if (password.length > 0 && confirmPassword === password) {
@@ -34,7 +36,7 @@ const RegistrationForm = () => {
       console.log({ firstName, lastName, birthDate, email, password });
       event.target.reset();
     } else {
-      alert('Please enter a valid date.');
+      alert('Please fill out all fields in the form.');
     }
   }
 

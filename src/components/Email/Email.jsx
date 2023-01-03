@@ -19,7 +19,7 @@ const Email = (props) => {
                     }}
                 />
                 <Form.Label>Email address</Form.Label>
-                <Form.Text style={{ color: '#cc0000' }}>{emailError}</Form.Text>
+            <Form.Text style={{ color: '#cc0000' }}>{emailError}</Form.Text>
             </FloatingLabel>
         </Form.Group>
 

@@ -6,12 +6,32 @@ $theme-colors: (
 .navbar {
   background-color: #156474;
 }
+.my-fade-enter {
+  opacity: 0;
+  transition: opacity 1000ms ease-in-out;
+}
+
+.my-fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+
+.my-fade-exit {
+  opacity: 1;
+  transition: opacity 1000ms ease-in-out;
+}
+
+.my-fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.generator-link {
+  color: blue;
+  cursor: pointer;
+}
 
 
-// .form-group.required .control-label:after {
-//   content:"*";
-//   color:red;
-// }
 
 
 
