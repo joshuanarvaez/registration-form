@@ -11,8 +11,6 @@ const About = () => (
       handleChange={e => console.log(e.target.value)} 
     ></CountryDropdown>
   </div>
-
-  
 );
 
 export default About;

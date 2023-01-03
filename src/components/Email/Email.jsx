@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Form, FloatingLabel } from 'react-bootstrap';
 
 const Email = (props) => {
@@ -11,8 +11,7 @@ const Email = (props) => {
                     type="email"
                     placeholder="Email address"
                     required
-                    muted
-                    disabled={birthDate === ''}
+                    disabled={birthDate === ""}
                     value={email}
                     onChange={(event) => {
                         setEmail(event.target.value);
@@ -20,7 +19,7 @@ const Email = (props) => {
                     }}
                 />
                 <Form.Label>Email address</Form.Label>
-                <Form.Text style={{ color: '#ff0232' }}>{emailError}</Form.Text>
+                <Form.Text style={{ color: '#cc0000' }}>{emailError}</Form.Text>
             </FloatingLabel>
         </Form.Group>
 

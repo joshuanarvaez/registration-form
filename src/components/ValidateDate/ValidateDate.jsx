@@ -1,34 +1,24 @@
-import React, {useState} from 'react';
-import validator from 'validator'
+// import React, { useState } from 'react';
+// import moment from 'moment';
+// import validator from 'validator'
 
 
-const ValidateDate = () => {
-  
-  const [errorMessage, setErrorMessage] = useState('')
+// const ValidateDate = (props) => {
+//   const { value, setValue } = props;
+//   const [dateError, setDateError] = useState('')
     
-  const validateDate = (value) => {
-    
-    if (validator.isDate(value)) {
-      setErrorMessage('Valid Date :)')
-    } else {
-      setErrorMessage('Enter Valid Date!')
-    }
-  }
-  return (
-    <div style={{
-      marginLeft: '200px',
-    }}>
-      <pre>
-        <h2>Validating Date in ReactJS</h2>
-        <span>Enter Date: </span><input type="text" 
-        onChange={(e) => validateDate(e.target.value)}></input> <br />
-        <span style={{
-          fontWeight: 'bold',
-          color: 'red',
-        }}>{errorMessage}</span>
-      </pre>
-    </div>
-  );
-}
+//   const validateDate = (value) => {
+//     const date = moment(value, 'MM/DD/YYYY', true);
+//     if (date.isValid()) {
+//       setDateError('');
+//       setValue(value);
+//     } else {
+//       setDateError('Please enter a valid date');
+//     }
+//   }
+//   return (
+//       <input type="text" value={value} onChange={(e) => validateDate(e.target.value)} />
+//   );
+// }
 
-export default ValidateDate;
+// export default ValidateDate;

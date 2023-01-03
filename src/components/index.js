@@ -11,6 +11,6 @@ export { default as PasswordGenerator } from './Password/PasswordGenerator/Passw
 export { default as FirstName } from './FirstName/FirstName';
 export { default as LastName } from './LastName/LastName';
 export { default as BirthDate } from './BirthDate/BirthDate';
-export { default as EmailValidator } from './Email/Email';
+export { default as Email } from './Email/Email';
 export { default as Password } from './Password/Password';
 export { default as ConfirmPassword } from './Password/ConfirmPassword';

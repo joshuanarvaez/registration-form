@@ -18,12 +18,12 @@ const PasswordGenerator = () => {
         });
     };
 
-
     // when generate button is clicked, pull appropriate characters from PasswordService based off state of passwordObj
-    const submit = () => {
+    const handleGenerateButtonClick = () => {
         let password = PasswordService.generatePassword(state.passwordLength);
         // now display the generated password in the appropriate textbox
         setState({ ...state, generatedPassword: password });
+
     };
 
     return (
@@ -33,44 +33,44 @@ const PasswordGenerator = () => {
                     <div className="form-card">
                         <div className="card">
                             <div className="card-body" >
-                                    <div className="mb-1">
-                                        <div className="input-group">
-                                            <input
-                                                value={state.generatedPassword}
-                                                onChange={updateInput}
-                                                name="generatedPassword"
-                                                type="text" className="form-control" placeholder="Set length and generate" />
-                                            <CopyToClipboard
-                                                text={state.generatedPassword} // here we target generated password to copy
-                                                onCopy={() => alert("Copied generated password to your clipboard") ? "" : window.location.reload()}>
-                                                <span className="input-group-text">
+                                <div className="mb-1">
+                                    <div className="input-group">
+                                        <input
+                                            value={state.generatedPassword}
+                                            onChange={updateInput}
+                                            name="generatedPassword"
+                                            type="text" className="form-control" placeholder="Set length and generate" />
+                                        <CopyToClipboard
+                                            text={state.generatedPassword} // here we target generated password to copy
+                                            onCopy={() => alert("Copied generated password to your clipboard") ? "" : window.location.reload()}>
+                                            <span className="input-group-text">
                                                 <i
                                                     type="submit"
-                                                    className=''>
+                                                    className="color">
                                                     <BsClipboardCheck />
                                                 </i>
-                                                </span>
-                                            </CopyToClipboard>
-                                        </div>
+                                            </span>
+                                        </CopyToClipboard>
                                     </div>
-                                    <div className="mb-2">
-                                        <div className="input-group">
-                                            <input
-                                                required={true} // only require password length
-                                                value={state.passwordLength}
-                                                onChange={updateInput}
-                                                name="passwordLength"
-                                                type="number" className="form-control" placeholder="Password Length" />
-                                            <span className="input-group-text"> Length </span>
-                                        </div>
+                                </div>
+                                <div className="mb-2">
+                                    <div className="input-group">
+                                        <input
+                                            required={true} // only require password length
+                                            value={state.passwordLength}
+                                            onChange={updateInput}
+                                            name="passwordLength"
+                                            type="number" className="form-control" placeholder="Password Length" />
+                                        <span className="input-group-text clipboard"> Length </span>
                                     </div>
-                                    <div className="text-center">
-                                        <input 
-                                        type="submit" 
+                                </div>
+                                <div className="text-center">
+                                    <input
+                                        type="submit"
                                         value="Generate"
-                                        onClick={submit} 
+                                        onClick={handleGenerateButtonClick}
                                         className="btn btn-outline-dark bg-primary text-white mx-auto" />
-                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
