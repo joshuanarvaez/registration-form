@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Card, Form, Button, Col, Row, Container } from 'react-bootstrap';
 import './RegistrationForm.css';
 import validator from 'validator';
-import PasswordGenerator from '../Password/PasswordGenerator/PasswordGenerator';
 import { FirstName, LastName, BirthDate, Email, Password, ConfirmPassword } from '../index';
 
 
@@ -14,8 +13,8 @@ const RegistrationForm = () => {
   const [email, setEmail] = useState('');
   const [emailError, setEmailError] = useState('')
   const [password, setPassword] = useState('');
-  const [generatedPassword, setGeneratedPassword] = useState('');
-  const [passwordLength, setPasswordLength] = useState(7);
+  // const [generatedPassword, setGeneratedPassword] = useState('');
+  // const [passwordLength, setPasswordLength] = useState(7);
   const [confirmPassword, setConfirmPassword] = useState('');
   const [isValidForm, setIsValidForm] = useState(false);
 
@@ -34,7 +33,7 @@ const RegistrationForm = () => {
 
     if (firstName && lastName && birthDate && email && password && confirmPassword && !dateError && !emailError && password === confirmPassword) {
       console.log({ firstName, lastName, birthDate, email, password });
-      event.target.reset();
+      // event.target.reset();
     } else {
       alert('Please fill out all fields in the form.');
     }
@@ -86,12 +85,12 @@ const RegistrationForm = () => {
                   birthDate={birthDate}
                   dateError={dateError}
                 />
-                <PasswordGenerator
+                {/* <PasswordGenerator
                   generatedPassword={generatedPassword}
                   setGeneratedPassword={setGeneratedPassword}
                   passwordLength={passwordLength}
                   setPasswordLength={setPasswordLength}
-                />
+                /> */}
               </Col>
               {/* Password Input Field */}
               <Col xs={12} md={4}>

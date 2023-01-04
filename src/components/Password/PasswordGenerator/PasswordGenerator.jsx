@@ -4,30 +4,35 @@ import { BsClipboardCheck } from 'react-icons/bs';
 import { PasswordService } from './PasswordService';
 
 const PasswordGenerator = () => {
-
     // create states for our inputs
     let [state, setState] = useState({
-        generatedPassword: '',
-        passwordLength: 7,
+      generatedPassword: '',
+      passwordLength: 7,
+      showGenerator: true,
     });
-
+  
     // update state of generated password and password length
     const updateInput = (event) => {
-        setState({
-            [event.target.name]: event.target.value
-        });
+      setState({
+        [event.target.name]: event.target.value,
+      });
     };
-
+  
     // when generate button is clicked, pull appropriate characters from PasswordService based off state of passwordObj
     const handleGenerateButtonClick = () => {
-        let password = PasswordService.generatePassword(state.passwordLength);
-        // now display the generated password in the appropriate textbox
-        setState({ ...state, generatedPassword: password });
-
+      let password = PasswordService.generatePassword(state.passwordLength);
+      // now display the generated password in the appropriate textbox
+      setState({ ...state, generatedPassword: password });
+    };
+  
+    // close the password generator component
+    const closeGenerator = () => {
+      setState({ ...state, showGenerator: false });
     };
 
     return (
         <React.Fragment>
+        {state.showGenerator && (
             <div className="container mt-3">
                 <div className="row">
                     <div className="form-card">
@@ -42,7 +47,7 @@ const PasswordGenerator = () => {
                                             type="text" className="form-control" placeholder="Set length and generate" />
                                         <CopyToClipboard
                                             text={state.generatedPassword} // here we target generated password to copy
-                                            onCopy={() => alert("Copied generated password to your clipboard") ? "" : window.location.reload()}>
+                                            onCopy={() => { state.generatedPassword && alert("Copied generated password to your clipboard"); closeGenerator()}}>
                                             <span className="input-group-text">
                                                 <i
                                                     type="submit"
@@ -77,6 +82,7 @@ const PasswordGenerator = () => {
                     </div>
                 </div>
             </div>
+        )}
         </React.Fragment>
     )
 };

@@ -22,26 +22,28 @@ const Password = (props) => {
         />
         <Form.Label>Password</Form.Label>
       </FloatingLabel>
-      <Form.Text id="passwordHelpBlock" onClick={() => setShowGenerator(!showGenerator)}>
-        Please create a strong password with at least 7 characters or use the <a href="#" className='generator-link'> Password Generator</a>.
-        <CSSTransition
-          in={showGenerator}
-          timeout={{ enter: 1000, exit: 1000}}
-          classNames="my-fade"
-          unmountOnExit
-        >
-          <div>
-            <PasswordGenerator />
-          </div>
-        </CSSTransition>
-        <PasswordCheckList
-          password={password}
-          confirmPassword={confirmPassword}
-          onChange={onChange}
-        />
-      </Form.Text>
+      {!showGenerator && (
+        <Form.Text id="passwordHelpBlock" onClick={() => setShowGenerator(!showGenerator)}>
+          Please create a strong password with at least 7 characters or use the <a href="#" className='generator-link'> Password Generator</a>.
+        </Form.Text>
+      )}
+      <CSSTransition
+        in={showGenerator}
+        timeout={{ enter: 1000, exit: 1000}}
+        classNames="my-fade"
+        unmountOnExit
+      >
+        <div>
+          <PasswordGenerator />
+        </div>
+      </CSSTransition>
+      <PasswordCheckList
+        password={password}
+        confirmPassword={confirmPassword}
+        onChange={onChange}
+      />
     </Form.Group>
-  );
+  ); 
 };
 
 export default Password;
